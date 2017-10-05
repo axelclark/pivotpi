@@ -1,7 +1,5 @@
 defmodule PivotPi.PCA9685 do
-  @moduledoc """
-  Documentation for PivotPi.PCA9685.
-  """
+  @moduledoc false
 
   # registers/etc:
   @pca9685_address     0x40
@@ -30,12 +28,9 @@ defmodule PivotPi.PCA9685 do
   alias GrovePi.{Board}
   import Bitwise
 
-  @doc """
-  Initialize the PCA9685.
-  """
   def start() do
     set_all_pwm(0, 0)
-    send_cmd(<<@mode2, (@outdrv ||| @invrt)>>)
+    send_cmd(<<@mode2, (@outdrv ||| @invrt)>>) # Totem pole drive, and inverted signal.
     send_cmd(<<@mode1, @allcall>>)
     Process.sleep(50)
   end
