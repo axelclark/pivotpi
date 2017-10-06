@@ -1,19 +1,34 @@
 # PivotPi
 
-**TODO: Add description**
+This application lets you interact with the
+[PivotPi](https://www.dexterindustries.com/pivotpi-tutorials-documentation/)
+through the
+[GrovePi+](https://www.dexterindustries.com/grovepi/). It will automatically
+start with your application an initiate a connection to the GrovePi+ board.
+Then you must initialize the PivotPi board using `PivotPi.start()`.
+
+```elixir
+iex> PivotPi.start()
+:ok
+iex> PivotPi.angle(0, 180)
+:ok
+iex> PivotPi.angle(0, 90)
+:ok
+iex> PivotPi.angle(0, 0)
+:ok
+iex> PivotPi.led(0, 100)
+:ok
+iex> PivotPi.led(0, 50)
+:ok
+iex> PivotPi.led(0, 0)
+:ok
+```
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `pivotpi` to your list of dependencies in `mix.exs`:
+Add `pivotpi` to your list of dependencies in mix.exs:
 
 ```elixir
 def deps do
-  [{:pivotpi, "~> 0.1.0"}]
+  [{:pivotpi, github: "axelclark/pivotpi"}]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/pivotpi](https://hexdocs.pm/pivotpi).
-
