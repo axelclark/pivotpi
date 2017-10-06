@@ -7,7 +7,7 @@ defmodule PivotPi do
   start with your application an initiate a connection to the GrovePi+ board.
   Then you must initialize the PivotPi board using `PivotPi.start()`.
 
-  Plug your PivotPi into the GrovePi IC2-1 port.  Plug your servo motor into slot 1.
+  Plug your PivotPi into the GrovePi I2C-1 port.  Plug your servo motor into slot 1.
 
   ```elixir
   iex> PivotPi.start()
