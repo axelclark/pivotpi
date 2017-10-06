@@ -4,7 +4,7 @@ This application lets you interact with the
 [PivotPi](https://www.dexterindustries.com/pivotpi-tutorials-documentation/)
 through the
 [GrovePi+](https://www.dexterindustries.com/grovepi/). It will automatically
-start with your application an initiate a connection to the GrovePi+ board.
+start with your application and initiate a connection to the GrovePi+ board.
 Then you must initialize the PivotPi board using `PivotPi.start()`.
 
 Plug your PivotPi into the GrovePI I2C-1 port.  Plug your servo motor into slot 1.
